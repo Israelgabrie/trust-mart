@@ -1,0 +1,21 @@
+.homeContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  top: 0;
+  left: 0;
+}
+
+
+/* .home-layout {
+  display: flex;
+  flex: 1;
+  background-color: #f9fce0;
+}
+
+.home-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+} */

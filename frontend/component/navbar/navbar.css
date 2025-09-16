@@ -1,0 +1,151 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1ca196;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05),
+            0 2px 4px rgba(0, 0, 0, 0.04);
+
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar-logo img {
+  height: 35px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-links a:hover {
+  opacity: 0.8;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.username {
+  font-weight: 500;
+}
+
+.logout-btn {
+  background: white;
+  color: #88940d;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #f1f1f1;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+/* Search box wrapper */
+.navbar-links {
+  background-color: white;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border: 2px solid transparent; /* default border */
+  transition: border-color 0.3s ease;
+}
+
+/* highlight when input inside is focused */
+.navbar-links:focus-within {
+  border-color: #246872;
+}
+
+/* Input inside the search box */
+.navBarInputBox {
+  width: 250px;
+  height: 90%;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  padding-left: 5px;
+  background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navBarInputBox {
+    width: 150px;
+  }
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 800px) {
+  /* Hide right side + search box by default on mobile */
+  .navbar-links,
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    background: white;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  /* Show when "active" */
+  .navbar-links.active,
+  .navbar-right.active {
+    display: flex;
+  }
+
+  /* Adjust search input for mobile */
+  .navBarInputBox {
+    width: 100%;
+  }
+
+  /* Hamburger shows on mobile */
+  .hamburger {
+    display: flex;
+  }
+}
