@@ -10,3 +10,5 @@ Government ID (optional for MVP, but required for trust later -- Not going to be
 Bank account details (for payouts when selling -- also not goign to be in the sign up page)
 
 if they sign up normally it will take them to the email verification page to cofirm theyre email
+
+also remember to add 

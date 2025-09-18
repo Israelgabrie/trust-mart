@@ -1,6 +1,14 @@
+@font-face {
+  font-family: "CalibreRegular";
+  src: url("../../public/calibreFont/TestCalibre-Regular-BF661746edbee52.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 .sidebar {
-  width: 220px;
-  background: linear-gradient(135deg, #239d92 0%, #1ca69a 100%); /* Added gradient background */
+  width: 50px;
+  background: #fff;
   border-right: 1px solid #ddd;
   padding: 20px 10px;
   height: 100vh;
@@ -81,15 +89,22 @@
   text-align: left;
   margin-left: 3px;
   font-weight: 400;
-  font-family: sans-serif;
-  color: white;
+  font-family: "CalibreRegular";
+  color: black;
   padding: 12px 15px; /* Increased padding */
   border-radius: 12px; /* Increased border radius */
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Enhanced transition */
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 8px;
   backdrop-filter: blur(5px); /* Added backdrop blur */
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 /* Added ripple effect */
@@ -112,13 +127,15 @@
 }
 
 .sideBarItem:hover {
-  background-color: #1ca69a;
+  background-color: #11B8CE;
+  color: white;
   transform: translateY(-2px) scale(1.02); /* Added lift and scale effect */
   box-shadow: 0 8px 25px rgba(28, 166, 154, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15); /* Added hover shadow */
 }
 
 /* Added active state */
 .sideBarItem:active {
+    background-color: #11B8CE;
   transform: translateY(0) scale(0.98);
   transition: transform 0.1s ease;
 }
@@ -126,7 +143,8 @@
 /* Added pulse animation for active items */
 .sideBarItem.active {
   animation: pulse 2s infinite;
-  background-color: #1ca69a;
+  background-color: #10AAC1;
+    color: white;
 }
 
 /* Added keyframe animations */
@@ -172,13 +190,20 @@
   }
 
   .sidebar.mobile-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: fixed;
-    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 70%;   /* takes more space */
+    height: 100vh;
+    z-index: 2000;
+    background: #fff;
     transform: translateX(0);
     animation: slideInFromLeft 0.3s ease;
   }
 }
+
 
 /* Added mobile slide animation */
 @keyframes slideInFromLeft {
@@ -192,7 +217,7 @@
 
 /* Added focus states for accessibility */
 .sideBarItem:focus {
-  outline: 2px solid #88940d;
+  outline: 2px solid #11B8CE;
   outline-offset: 2px;
 }
 

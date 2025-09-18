@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./SignUp.css";
 import Image from "../../public/img/ChatGPT Image Sep 16, 2025, 11_05_42 AM.png"
+import { EyeIcon, EyeOffIcon } from "../../component/icons/icons";
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -143,7 +144,7 @@ export default function SignUp() {
                 className="password-toggle"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? "🙈" : "👁️"}
+                {showPassword ? <EyeOffIcon/> : <EyeIcon/>}
               </button>
             </div>
           </div>
@@ -168,7 +169,7 @@ export default function SignUp() {
                 className="password-toggle"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
-                {showConfirmPassword ? "🙈" : "👁️"}
+                {showConfirmPassword ? <EyeOffIcon/> : <EyeIcon/>}
               </button>
             </div>
           </div>

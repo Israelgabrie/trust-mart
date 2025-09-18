@@ -2,15 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1ca196;
+  background-color: #ffff;
   padding: 10px 20px;
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05),
-            0 2px 4px rgba(0, 0, 0, 0.04);
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .navbar-logo {
@@ -28,6 +26,7 @@
 .navbar-links {
   display: flex;
   gap: 20px;
+  color: #82e6e1;
 }
 
 .navbar-links a {
@@ -47,19 +46,39 @@
   gap: 15px;
 }
 
-.username {
-  font-weight: 500;
+.notificationBox {
+  margin-right: 10px;
+}
+
+.notificationNumber {
+  position: absolute;
+  background-color: #11b8ce;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  font-size: 10px;
+  font-family: "CalibreRegular";
+  margin-left: -13px;
+  margin-top:-1px;
+  
 }
 
 .logout-btn {
-  background: white;
-  color: #88940d;
+  background: rgb(230, 25, 25);
+  color: white;
   border: none;
-  padding: 6px 12px;
+  padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
 }
 
 .logout-btn:hover {
@@ -77,9 +96,10 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: white;
+  background: #11b8ce;
   border-radius: 2px;
 }
+
 /* Search box wrapper */
 .navbar-links {
   background-color: white;
@@ -93,11 +113,12 @@
   padding: 5px 10px;
   border: 2px solid transparent; /* default border */
   transition: border-color 0.3s ease;
+  box-shadow: 0 2px 4px #11b8ce;
 }
 
 /* highlight when input inside is focused */
 .navbar-links:focus-within {
-  border-color: #246872;
+  border-color: #4fd9eb;
 }
 
 /* Input inside the search box */

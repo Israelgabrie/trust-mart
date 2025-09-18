@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Login.css";
+import { EmailIcon, EyeIcon, EyeOffIcon } from "../../component/icons/icons";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -78,7 +79,7 @@ export default function Login() {
               Email Address
             </label>
             <div className="input-container">
-              <span className="input-icon">📧</span>
+              <span className="input-icon"><EmailIcon/></span>
               <input
                 id="email"
                 type="email"
@@ -102,7 +103,7 @@ export default function Login() {
                 className="input-icon"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? "🙈" : "👁️"}
+                {showPassword ? <EyeOffIcon/> : <EyeIcon/>}
               </div>
               <input
                 id="password"
@@ -141,6 +142,5 @@ export default function Login() {
         </div>
       </div>
     </div>
-
   );
 }
